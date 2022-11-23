@@ -1,0 +1,19 @@
+1. In mongo shell create collection Tecomp
+2. Insert one entry
+3. In root shell execute following command
+ pip install pymongo
+4. Run python program
+...........program___
+import pymongo
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["db"]
+print(mydb.list_collection_names())
+print('code is working')
+collist = mydb.list_collection_names()
+if "tecomp" in collist:
+ print("The collection exists.")
+
+ mycol = mydb["tecomp"]
+
+ x = mycol.find_one()
+print(x)
