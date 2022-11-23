@@ -12,31 +12,9 @@ INSERT INTO Employee values(106, 'Marc', 185000, 'Computer');
 INSERT INTO Employee values(108, 'Vikki', 10500, 'Computer');
 INSERT INTO Employee values(109, 'Ronaldo', 15500, 'Computer');
 INSERT INTO Employee values(107, 'Jim', 12500, 'Computer');
-
-CREATE VIEW [Computer Employee] AS
-SELECT emp_id, emp_name
-FROM Employee
-WHERE emp_dept = 'Computer';
-
-SELECT * FROM [Computer Employee];
-
-CREATE VIEW [Mechanical Employee] AS
-SELECT emp_id, emp_name
-FROM Employee
-WHERE emp_dept = 'Mechanical';
-
-SELECT * FROM [Mechanical Employee];
-
-CREATE VIEW [HR Employee] AS
-SELECT emp_id, emp_name
-FROM Employee
-WHERE emp_dept = 'HR';
-
-SELECT * FROM [HR Employee];
-
-CREATE VIEW [Electronic Employee] AS
-SELECT emp_id, emp_name
-FROM Employee
-WHERE emp_dept = 'Electronic';
-
-SELECT * FROM [Electronic Employee];
+INSERT INTO Employee values(110, 'Mac', 500, 'NaN');
+INSERT INTO Employee values(111, 'James', 900, 'NaN');
+UPDATE Employee SET emp_dept = 'Electronic' where emp_name = 'Mac';
+UPDATE Employee SET emp_dept = 'HR' where emp_name = 'James';
+INSERT INTO Employee values(112, 'Lisa', 5900, 'NaN');
+DELETE FROM Employee where emp_dept = 'NaN';
